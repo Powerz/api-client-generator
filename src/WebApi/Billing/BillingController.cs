@@ -12,9 +12,10 @@ namespace WebApi.Billing;
 public class BillingController : ControllerBase
 {
     [HttpPost("donate")]
+    [Consumes(MediaTypeNames.Application.Json)]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(ValidationProblemDetails))]
-    public ActionResult<Greeting> Donate(Payment payment)
+    public ActionResult<Greeting> Donate([FromBody]Payment payment)
     {
         return new Greeting();
     }
