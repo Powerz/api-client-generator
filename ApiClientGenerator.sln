@@ -4,11 +4,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "etc", "etc", "{EEE1F6BC-558
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		README.md = README.md
+		nswag.json = nswag.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{74FC8843-BE99-4FC1-949E-E5EC0FC85680}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "src\WebApi\WebApi.csproj", "{C3795181-0D99-4245-B35C-DCD8B35CF95B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "build", "build\build.csproj", "{398FB86E-849E-4BC6-BB83-BDFECCB872F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,5 +26,9 @@ Global
 		{C3795181-0D99-4245-B35C-DCD8B35CF95B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3795181-0D99-4245-B35C-DCD8B35CF95B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3795181-0D99-4245-B35C-DCD8B35CF95B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{398FB86E-849E-4BC6-BB83-BDFECCB872F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{398FB86E-849E-4BC6-BB83-BDFECCB872F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{398FB86E-849E-4BC6-BB83-BDFECCB872F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{398FB86E-849E-4BC6-BB83-BDFECCB872F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
