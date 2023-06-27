@@ -9,6 +9,7 @@
       "addMissingPathParameters": false,
       "defaultPropertyNameHandling": "Default",
       "defaultReferenceTypeNullHandling": "Null",
+      "defaultResponseReferenceTypeNullHandling": "Null",
       "defaultEnumHandling": "Integer",
       "flattenInheritanceHierarchy": false,
       "generateKnownTypes": true,
@@ -22,7 +23,7 @@
       "output": "",
       "outputType": "OpenApi3",
       "assemblyPaths": [
-        "src/WebApi/bin/$(Configuration)/net7.0/WeatherApi.dll"
+        "src/WeatherApi/bin/$(Configuration)/net7.0/WeatherApi.dll"
       ],
       "referencePaths": []
     }
