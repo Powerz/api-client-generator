@@ -80,7 +80,7 @@
       "handleReferences": false,
       "generateImmutableArrayProperties": false,
       "generateImmutableDictionaryProperties": false,
-      "output": "WeatherApiClient/ApiClient.generated.cs"
+      "output": "src/WeatherApiClient/ApiClient.generated.cs"
     }
   }
 }
