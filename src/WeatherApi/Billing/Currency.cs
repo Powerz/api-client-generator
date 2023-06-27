@@ -1,4 +1,4 @@
-namespace WebApi.Billing;
+namespace WeatherApi.Billing;
 
 public enum Currency
 {

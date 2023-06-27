@@ -1,7 +1,7 @@
 using System.Net.Mime;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebApi.Billing;
+namespace WeatherApi.Billing;
 
 [ApiController]
 [Route("[controller]")]

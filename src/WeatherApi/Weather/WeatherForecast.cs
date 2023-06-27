@@ -1,4 +1,4 @@
-namespace WebApi.Weather;
+namespace WeatherApi.Weather;
 
 public record WeatherForecast
 {

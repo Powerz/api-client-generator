@@ -22,7 +22,7 @@
       "output": "",
       "outputType": "OpenApi3",
       "assemblyPaths": [
-        "src/WebApi/bin/$(Configuration)/net7.0/WebApi.dll"
+        "src/WebApi/bin/$(Configuration)/net7.0/WeatherApi.dll"
       ],
       "referencePaths": []
     }

@@ -1,6 +1,6 @@
 using Bogus;
 
-namespace WebApi.Weather;
+namespace WeatherApi.Weather;
 
 public class FortuneTeller
 {

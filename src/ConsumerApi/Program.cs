@@ -2,7 +2,7 @@ using WeatherApiClient;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var weatherApiUri = new Uri(builder.Configuration["WeatherApiUri"]!);
+var weatherApiUri = new Uri(builder.Configuration["WeatherApiUrl"]!);
 
 builder.Services
     .AddHttpClient<IBillingApi, BillingApi>(x => x.BaseAddress = weatherApiUri);
