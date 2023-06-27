@@ -13,7 +13,7 @@ public class BillingController : ControllerBase
 {
     [HttpPost("donate")]
     [Consumes(MediaTypeNames.Application.Json)]
-    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Greeting))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(ValidationProblemDetails))]
     public ActionResult<Greeting> Donate([FromBody]Payment payment)
     {

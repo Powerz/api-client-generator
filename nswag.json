@@ -30,7 +30,7 @@
   "codeGenerators": {
     "openApiToCSharpClient": {
       "generateClientClasses": true,
-      "generateClientInterfaces": false,
+      "generateClientInterfaces": true,
       "generateDtoTypes": true,
       "injectHttpClient": true,
       "disposeHttpClient": false,
@@ -51,7 +51,7 @@
       "generateUpdateJsonSerializerSettingsMethod": true,
       "serializeTypeInformation": false,
       "queryNullValue": "",
-      "className": "{controller}Client",
+      "className": "{controller}Api",
       "operationGenerationMode": "MultipleClientsFromOperationId",
       "generateOptionalParameters": false,
       "generateJsonMethods": true,
