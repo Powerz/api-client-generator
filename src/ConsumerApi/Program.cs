@@ -1,3 +1,4 @@
+using HttpUtils;
 using WeatherApiClient;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -5,10 +6,19 @@ var builder = WebApplication.CreateBuilder(args);
 var weatherApiUri = new Uri(builder.Configuration["WeatherApiUrl"]!);
 
 builder.Services
-    .AddHttpClient<IBillingApi, BillingApi>(x => x.BaseAddress = weatherApiUri);
+    .AddTransient<LoggingHttpHandler>();
 
 builder.Services
-    .AddHttpClient<IWeatherApi, WeatherApi>(x => x.BaseAddress = weatherApiUri);
+    .AddHttpClient<IBillingApi, BillingApi>(x => x.BaseAddress = weatherApiUri)
+    .AddHttpMessageHandler<LoggingHttpHandler>();
+    // .AddHttpMessageHandler<CorrelationIdHandler>()
+    // .AddHttpMessageHandler<ErrorsHandler>()
+    // .AddHttpMessageHandler<ApiTokenHandler>()
+    // .AddHttpMessageHandler<SomeOtherAwesomeHandlerHandler>();
+
+builder.Services
+    .AddHttpClient<IWeatherApi, WeatherApi>(x => x.BaseAddress = weatherApiUri)
+    .AddHttpMessageHandler<LoggingHttpHandler>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -23,9 +33,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();

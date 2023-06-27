@@ -5,7 +5,6 @@ Target("clean up", () => RunAsync("rm", "-rf WeatherApiClient", "src"));
 
 Target("build", DependsOn("clean up"), () => RunAsync("dotnet", "build WeatherApi --configuration Debug --nologo --verbosity quiet", "src"));
 
-
 //? Create Api client project
 
 Target("create api client project",
@@ -30,6 +29,7 @@ Target("generate api client",
 Target("build api client",
     DependsOn("generate api client"),
     () => RunAsync("dotnet", "build WeatherApiClient --configuration Debug --nologo --verbosity quiet", "src"));
+
 
 //? nuget pack, push
 
