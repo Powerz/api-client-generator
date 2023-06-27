@@ -1,2 +1,1 @@
-# api-client-generator
-The right way to generate a .NET client for ASP.NET Web API
+# The right way to generate a .NET client for ASP.NET Web API
