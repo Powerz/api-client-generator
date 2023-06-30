@@ -3,20 +3,20 @@ using static SimpleExec.Command;
 
 Target("clean up", () => RunAsync("rm", "-rf WeatherApiClient", "src"));
 
-Target("build", DependsOn("clean up"), () => RunAsync("dotnet", "build WeatherApi --configuration Debug --nologo --verbosity quiet", "src"));
+Target("build api", DependsOn("clean up"), () => RunAsync("dotnet", "build WeatherApi --configuration Debug --nologo --verbosity quiet", "src"));
 
 //? Create Api client project
 
 Target("create api client project",
-    DependsOn("build"),
+    DependsOn("build api"),
     () => RunAsync("dotnet", "new classlib -n WeatherApiClient", "src"));
 
-Target("clean up stuff",
+Target("remove Class1.cs",
     DependsOn("create api client project"),
     () => RunAsync("rm", "Class1.cs", "src/WeatherApiClient"));
 
 Target("add Newtonsoft.Json",
-    DependsOn("clean up stuff"),
+    DependsOn("remove Class1.cs"),
     () => RunAsync("dotnet", "add package Newtonsoft.Json", "src/WeatherApiClient"));
 
 
